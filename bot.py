@@ -139,11 +139,14 @@ logger = logging.getLogger(__name__)
 # TELEGRAM BOT TOKEN
 # ============================================================
 
-BOT_TOKEN = "8737453914:AAHwCc817P4t1XQd755N1l04318Xb9f5pQ8"
+import os
 
-if not BOT_TOKEN or BOT_TOKEN == "TOKEN_HERE":
-    raise ValueError("لطفاً توکن ربات رو توی خط BOT_TOKEN بذار.")
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 
+if not BOT_TOKEN:
+    raise ValueError(
+        "TELEGRAM_BOT_TOKEN environment variable is not set!"
+)
 
 # ============================================================
 # USER SESSIONS
