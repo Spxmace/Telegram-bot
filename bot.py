@@ -722,9 +722,19 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text("❌ پورت باید بین 1 تا 65535 باشد.")
             return
         session["port"] = port
-        session["step"] = "railway_token"
-        await update.message.reply_text("🔑 حالا Railway Token را بفرست.")
-        return
+session["step"] = "railway_token"
+
+await update.message.reply_text(
+    "🔑 حالا Railway Token را بفرست.\n\n"
+    "🌐 صفحه ساخت توکن Railway:\n"
+    "https://railway.com/account/tokens\n\n"
+    "📌 مراحل:\n"
+    "1️⃣ روی لینک بالا بزن\n"
+    "2️⃣ روی «Create Token» کلیک کن\n"
+    "3️⃣ یه اسم دلخواه بده و توکن رو کپی کن\n"
+    "4️⃣ توکن رو همین‌جا برام بفرست"
+)
+return
 
     if step == "railway_token":
         railway_token = text
