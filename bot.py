@@ -139,14 +139,10 @@ logger = logging.getLogger(__name__)
 # TELEGRAM BOT TOKEN
 # ============================================================
 
-import os
-
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+BOT_TOKEN = "8737453914:AAHwCc817P4t1XQd755N1l04318Xb9f5pQ8"
 
 if not BOT_TOKEN:
-    raise ValueError(
-        "TELEGRAM_BOT_TOKEN environment variable is not set!"
-)
+    raise ValueError("Telegram Bot Token is required!")
 
 # ============================================================
 # USER SESSIONS
