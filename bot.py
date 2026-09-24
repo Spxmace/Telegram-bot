@@ -723,7 +723,9 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
         session["port"] = port
         session["step"] = "railway_token"
-        await update.message.reply_text("🔑 حالا Railway Token را بفرست.")
+        await update.message.reply_text("🔑 حالا Railway Token را بفرست
+صفحه ساخت توکن Railway : 
+https://railway.com/account/tokens.")
         return
 
     if step == "railway_token":
