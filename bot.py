@@ -139,7 +139,7 @@ logger = logging.getLogger(__name__)
 # TELEGRAM BOT TOKEN
 # ============================================================
 
-BOT_TOKEN = "8536412112:AAEpnyttHFjyHbcOgCxnFsNggdwlEqfzru4"
+BOT_TOKEN = "8737453914:AAHwCc817P4t1XQd755N1l04318Xb9f5pQ8"
 
 if not BOT_TOKEN or BOT_TOKEN == "TOKEN_HERE":
     raise ValueError("لطفاً توکن ربات رو توی خط BOT_TOKEN بذار.")
