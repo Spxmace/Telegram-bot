@@ -735,8 +735,7 @@ await update.message.reply_text(
     "4️⃣ توکن رو همین‌جا برام بفرست"
 )
 return
-
-    if step == "railway_token":
+if step == "railway_token":
         railway_token = text
         await update.message.reply_text("🔐 در حال بررسی Railway Token...")
 
